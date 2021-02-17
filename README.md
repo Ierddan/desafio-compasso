@@ -13,7 +13,7 @@ Ajustar username e password de acordo com ambiente.
 spring.datasource.username = root
 spring.datasource.password = root
 
-##Apoio
+## Apoio
 
 * Query para verificar clientes e suas respectivas cidades:
 
