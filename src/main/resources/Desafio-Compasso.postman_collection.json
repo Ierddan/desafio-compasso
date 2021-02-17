@@ -1,0 +1,193 @@
+{
+	"info": {
+		"_postman_id": "f748e530-64c6-45fe-8466-f9ee0e14290b",
+		"name": "Desafio-Compasso",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "POST CLIENTE",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"fullName\":\"Klebson Oliveira\",\r\n    \"genre\":\"Masculino\",\r\n    \"birthDate\":\"20/05/1994\",\r\n    \"age\":25,\r\n    \"city\":{\r\n        \"id\":1\r\n    }        \r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8081/clients",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"clients"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET ALL CLIENTES",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8081/clients",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"clients"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POST CIDADE",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\":\"Recife\",\r\n    \"state\":\"Pernambuco\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8081/citys",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"citys"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "UPDATE CLIENTE",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\":5,\r\n    \"fullName\":\"Klarissa Oliveira\",\r\n    \"genre\":\"Feminino\"  \r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8081/clients/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"clients",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET POR ESTADO",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8081/citys/findState?state=Pernambuco",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"citys",
+						"findState"
+					],
+					"query": [
+						{
+							"key": "state",
+							"value": "Pernambuco"
+						}
+					]
+				},
+				"description": "GetById"
+			},
+			"response": []
+		},
+		{
+			"name": "GET POR CIDADE",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8081/citys/findCity?city=Paulista",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"citys",
+						"findCity"
+					],
+					"query": [
+						{
+							"key": "city",
+							"value": "Paulista"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET POR NOME COMPLETO",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8081/clients/findName?name=Iêrddan Costa de Oliveira",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"clients",
+						"findName"
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": "Iêrddan Costa de Oliveira"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
